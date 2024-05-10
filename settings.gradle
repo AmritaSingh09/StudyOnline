@@ -21,3 +21,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "StudyOnline"
 include ':app'
+include ':admin'
+include ':chat'
+include ':teacher'
+include ':quiz'
+include ':course'

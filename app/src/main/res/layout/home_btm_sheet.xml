@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingBottom="2dp">
+    android:paddingBottom="2dp"
+    android:background="@color/blue_white_light"
+    >
 
     <View
         android:id="@+id/v234"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginHorizontal="10dp"
-        android:background="@color/blue_fg"
+        android:background="#BED7DC"
         />
 
     <LinearLayout
@@ -29,11 +30,12 @@
             >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/rounded_home_app_logo_24"
                 android:layout_marginTop="3dp"
                 app:tint="@color/blue_fg"
+                android:padding="2dp"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -42,8 +44,9 @@
                 android:gravity="center"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="3dp"
-                android:textStyle="bold"
+                android:textStyle="normal"
                 android:textColor="@color/blue_fg"
+                android:textSize="12sp"
                 />
 
         </LinearLayout>
@@ -56,11 +59,12 @@
             >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/round_account_balance_24"
                 android:layout_marginTop="3dp"
                 app:tint="@color/blue_fg"
+                android:padding="2dp"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -69,8 +73,9 @@
                 android:gravity="center"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="3dp"
-                android:textStyle="bold"
+                android:textStyle="normal"
                 android:textColor="@color/blue_fg"
+                android:textSize="12sp"
                 />
 
         </LinearLayout>
@@ -84,11 +89,12 @@
             >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/round_chat_24"
                 android:layout_marginTop="3dp"
                 app:tint="@color/blue_fg"
+                android:padding="2dp"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -97,8 +103,9 @@
                 android:gravity="center"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="3dp"
-                android:textStyle="bold"
+                android:textStyle="normal"
                 android:textColor="@color/blue_fg"
+                android:textSize="12sp"
                 />
 
         </LinearLayout>
@@ -111,11 +118,12 @@
             >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/round_golf_course_24"
                 android:layout_marginTop="3dp"
                 app:tint="@color/blue_fg"
+                android:padding="2dp"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -124,8 +132,9 @@
                 android:gravity="center"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="3dp"
-                android:textStyle="bold"
+                android:textStyle="normal"
                 android:textColor="@color/blue_fg"
+                android:textSize="12sp"
                 />
 
         </LinearLayout>
@@ -139,11 +148,12 @@
             >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/round_person_24"
                 android:layout_marginTop="3dp"
                 app:tint="@color/blue_fg"
+                android:padding="2dp"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -152,8 +162,9 @@
                 android:gravity="center"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="3dp"
-                android:textStyle="bold"
+                android:textStyle="normal"
                 android:textColor="@color/blue_fg"
+                android:textSize="12sp"
                 />
 
         </LinearLayout>
