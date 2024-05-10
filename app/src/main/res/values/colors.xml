@@ -9,6 +9,11 @@
     <color name="blue3">#00b4d8</color>
     <color name="blue4">#90e0ef</color>
     <color name="blue5">#caf0f8</color>
+    <color name="blue_main_bg">#F2F3FE</color>
+    <color name="blue_light">#F9FAFE</color>
+    <color name="blue_fg">#586BEC</color>
+    <color name="blue_bg2">#E1E6FC</color>
+    <color name="blue_white_light">#FAFBFE</color>
 
     <color name="brown1">#3c3744</color>
     <color name="cream1">#fbfff1</color>

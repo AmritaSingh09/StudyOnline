@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue5"
+    android:background="#F2F3FE"
     tools:context=".SplashScreen">
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:layout_margin="10dp"
-        android:textColor="@color/brown1"
+        android:textColor="@color/blue_fg"
         android:textStyle="bold|italic"
         android:textSize="11sp"
         />
@@ -25,7 +25,8 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_centerInParent="true"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@drawable/round_lightbulb_circle_24"
+        app:tint="@color/blue_fg"
         />
 
 </RelativeLayout>

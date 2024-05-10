@@ -3,18 +3,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        >
+        <item android:title="GENERAL">
+            <menu>
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/ic_menu_camera"
+                    android:title="@string/menu_home" />
+                <item
+                    android:id="@+id/c"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Notification" />
+                <item
+                    android:id="@+id/bv"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Calender" />
+                <item
+                    android:id="@+id/e"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Profile" />
+
+            </menu>
+
+        </item>
+
+        <item android:title="COURSE"
+            >
+            <menu>
+                <item
+                    android:id="@+id/nav_gallery"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:title="Course" />
+                <item
+                    android:id="@+id/a"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Events" />
+                <item
+                    android:id="@+id/b"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Attendence" />
+                <item
+                    android:id="@+id/y"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Results" />
+                <item
+                    android:id="@+id/i"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Library" />
+                <item
+                    android:id="@+id/q"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Quiz" />
+                <item
+                    android:id="@+id/v"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Study Material" />
+                <item
+                    android:id="@+id/qs"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Doubt" />
+            </menu>
+
+        </item>
+
+        <item android:title="OTHER">
+            <menu>
+
+                <item
+                    android:id="@+id/w"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Personal Reminders" />
+
+                <item
+                    android:id="@+id/t"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Settings" />
+
+                <item
+                    android:id="@+id/qr"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Customer Support" />
+                <item
+                    android:id="@+id/qd"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="About Us" />
+
+
+
+            </menu>
+
+        </item>
+
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/qc"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:title="Logout" />
+
+
     </group>
+
 </menu>
