@@ -65,6 +65,7 @@
                             />
 
                         <TextView
+                            android:id="@+id/h_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Amrita Kumari"
@@ -148,6 +149,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/h_category_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See All"
@@ -172,6 +174,7 @@
                     android:orientation="horizontal"
                     >
                     <LinearLayout
+                        android:id="@+id/h_ct_course"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
@@ -215,6 +218,7 @@
 
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/h_ct_event"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
@@ -256,6 +260,7 @@
 
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/h_ct_calc"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
@@ -304,6 +309,7 @@
                     android:orientation="horizontal"
                     >
                     <LinearLayout
+                        android:id="@+id/h_ct_library"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
@@ -344,6 +350,7 @@
 
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/h_ct_quiz"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
@@ -383,8 +390,8 @@
                             />
 
                     </LinearLayout>
-
                     <LinearLayout
+                        android:id="@+id/h_ct_calender"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
@@ -488,20 +495,20 @@
                                     android:textSize="12sp"
                                     />
                                 <TextView
-                                    android:id="@+id/course"
+                                    android:id="@+id/h_course"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="(MCA)"
                                     android:textColor="#637A9F"
                                     android:textStyle="bold"
                                     android:layout_toEndOf="@id/d1"
-                                    android:layout_toStartOf="@id/e"
+                                    android:layout_toStartOf="@id/h_view_plan"
                                     android:layout_centerVertical="true"
                                     android:maxLines="1"
                                     android:ellipsize="end"
                                     />
                                 <ImageView
-                                    android:id="@+id/e"
+                                    android:id="@+id/h_view_plan"
                                     android:layout_width="24dp"
                                     android:layout_height="24dp"
                                     android:src="@drawable/rounded_keyboard_arrow_right_24"
@@ -536,6 +543,7 @@
                                         />
 
                                     <TextView
+                                        android:id="@+id/h_duration"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="2023-25"
@@ -546,6 +554,7 @@
                                         />
 
                                     <TextView
+                                        android:id="@+id/h_left_duration"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="left 395 days"
@@ -554,6 +563,7 @@
                                         />
 
                                     <TextView
+                                        android:id="@+id/h_working_days"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Working days 90"
@@ -595,6 +605,7 @@
                                         />
 
                                     <TextView
+                                        android:id="@+id/h_price"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Rs.5,00,000"
@@ -605,6 +616,7 @@
                                         />
 
                                     <TextView
+                                        android:id="@+id/h_left_price"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="3,00,000 dues"
@@ -633,6 +645,7 @@
                                 >
 
                                 <LinearLayout
+                                    android:id="@+id/h_course_material"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -666,6 +679,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
+                                    android:id="@+id/h_course_mock"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -699,6 +713,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
+                                    android:id="@+id/h_course_result"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -732,6 +747,7 @@
                                 </LinearLayout>
 
                                 <LinearLayout
+                                    android:id="@+id/h_course_attendence"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -773,6 +789,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <TextView
+                        android:id="@+id/h_course_desc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Description: Freebees available with the courses"
@@ -806,6 +823,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/h_course_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See All"
@@ -818,12 +836,22 @@
                     />
 
             </RelativeLayout>
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/h_course_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginTop="15dp"
+                />
+
+             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="15dp"
                 >
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -990,6 +1018,7 @@
 
             <!-- Library -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/h_library_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="20dp"
@@ -1077,6 +1106,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/h_study_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See All"
@@ -1102,6 +1132,7 @@
                     >
 
                     <RelativeLayout
+                        android:id="@+id/h_material_note"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -1149,6 +1180,7 @@
                     </RelativeLayout>
 
                     <RelativeLayout
+                        android:id="@+id/h_material_test"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -1193,6 +1225,7 @@
 
                     </RelativeLayout>
                     <RelativeLayout
+                        android:id="@+id/h_material_assignment"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -1237,6 +1270,7 @@
 
                     </RelativeLayout>
                     <RelativeLayout
+                        android:id="@+id/h_material_result"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -1326,6 +1360,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/h_mentor_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="See All"
@@ -1338,6 +1373,16 @@
                     />
 
             </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/h_mentor_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginTop="15dp"
+                />
+
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1733,6 +1778,27 @@
                 </LinearLayout>
 
             </androidx.core.widget.NestedScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/blue_white_light"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contents at the \nbottom about coming soon"
+                    android:textColor="#9A9BA1"
+                    android:textSize="19sp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    />
+
+            </RelativeLayout>
+
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

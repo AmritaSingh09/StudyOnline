@@ -22,6 +22,7 @@
         android:orientation="horizontal"
         >
         <LinearLayout
+            android:id="@+id/h_btm_home"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -51,6 +52,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/h_btm_study"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -81,6 +83,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/h_btm_chat"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -110,6 +113,7 @@
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/h_btm_todo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -140,6 +144,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/h_btm_profile"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"

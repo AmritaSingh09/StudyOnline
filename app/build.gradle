@@ -38,6 +38,7 @@ dependencies {
     implementation project(':course')
     implementation project(':quiz')
     implementation project(':teacher')
+    implementation project(':calculator')
 
     implementation libs.appcompat
     implementation libs.material
