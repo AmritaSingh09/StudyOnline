@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="2dp"
+    android:background="@color/blue_white_light"
+    >
+
+    <View
+        android:id="@+id/v234"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#BED7DC"
+        />
+
+    <LinearLayout
+        android:layout_below="@id/v234"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:id="@+id/h_btm_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rounded_home_app_logo_24"
+                android:layout_marginTop="3dp"
+                app:tint="@color/blue_fg"
+                android:padding="2dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="3dp"
+                android:textStyle="normal"
+                android:textColor="@color/blue_fg"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/h_btm_study"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/round_account_balance_24"
+                android:layout_marginTop="3dp"
+                app:tint="@color/blue_fg"
+                android:padding="2dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Study"
+                android:gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="3dp"
+                android:textStyle="normal"
+                android:textColor="@color/blue_fg"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/h_btm_chat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/round_chat_24"
+                android:layout_marginTop="3dp"
+                app:tint="@color/blue_fg"
+                android:padding="2dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chat"
+                android:gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="3dp"
+                android:textStyle="normal"
+                android:textColor="@color/blue_fg"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/h_btm_todo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/round_golf_course_24"
+                android:layout_marginTop="3dp"
+                app:tint="@color/blue_fg"
+                android:padding="2dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TODO"
+                android:gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="3dp"
+                android:textStyle="normal"
+                android:textColor="@color/blue_fg"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/h_btm_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/round_person_24"
+                android:layout_marginTop="3dp"
+                app:tint="@color/blue_fg"
+                android:padding="2dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="3dp"
+                android:textStyle="normal"
+                android:textColor="@color/blue_fg"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

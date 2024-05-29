@@ -3,7 +3,10 @@
 
     <application>
         <activity
-            android:name=".MainActivity2"
+            android:name=".ui.add.Event"
+            android:exported="false" />
+        <activity
+            android:name=".AdminMain"
             android:exported="false" />
     </application>
 

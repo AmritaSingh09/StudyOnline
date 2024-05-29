@@ -8,15 +8,19 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
-import com.org.admin.MainActivity2;
+import com.org.admin.AdminMain;
 import com.org.calculator.MainCalculator;
+import com.org.course.ui.CourseActivityMain;
 import com.org.studyonline.R;
 import com.org.studyonline.core.adapters.CourseAdapter;
 import com.org.studyonline.core.adapters.MentorAdapter;
+import com.org.studyonline.core.adapters.SliderHome1;
 import com.org.studyonline.core.models.CourseModel;
 import com.org.studyonline.core.models.MentorModel;
 
@@ -39,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
     private CourseAdapter courseAdapter;
     private MentorAdapter mentorAdapter;
 
+    private ViewPager top_slider;
+    private LinearLayout top_dot_slider;
+    private int dotscount;
+    private ImageView[] dots;
 
 
     @Override
@@ -51,92 +59,96 @@ public class MainActivity extends AppCompatActivity {
         hamb.setOnClickListener(view -> {
             drawerLayout.open();
         });
+
+
+        loadSlider();
+
         not.setOnClickListener(v -> {
             //Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
 
         });
 
         category_all.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         course_all.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         study_all.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         mentor_all.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
 
         nav_home.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         nav_study.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         nav_chat.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         nav_todo.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         nav_profile.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
 
         ct_course.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, CourseActivityMain.class));
         });
         ct_event.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         ct_calculator.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, MainCalculator.class));
         });
         ct_library.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         ct_quiz.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         ct_calender.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
 
         library_card.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
 
         btn_course_plan.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
 
         course_material.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         course_mock.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         course_result.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         course_attendence.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
 
         material_note.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         material_test.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         material_assignment.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         material_result.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
 
         courseAdapter = new CourseAdapter(getCourseList(), MainActivity.this);
@@ -145,6 +157,58 @@ public class MainActivity extends AppCompatActivity {
         mentorAdapter = new MentorAdapter(getMentorsList(), MainActivity.this);
         mentors.setAdapter(mentorAdapter);
 
+    }
+
+    private void loadSlider() {
+        Integer[] images = {R.drawable.banner1,
+                R.drawable.banner2,
+                R.drawable.banner2,
+                R.drawable.banner1};
+
+        SliderHome1 top_slider_adapter = new SliderHome1(this,images);
+        top_slider.setClipToPadding(false);
+        top_slider.setPadding(50,0,150,0);
+        top_slider.setAdapter(top_slider_adapter);
+
+        dotscount = top_slider_adapter.getCount();
+        dots = new ImageView[dotscount];
+
+        for(int i = 0; i < dotscount; i++){
+
+            dots[i] = new ImageView(this);
+            dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.non_active_dot));
+
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+
+            params.setMargins(8, 0, 8, 0);
+
+            top_dot_slider.addView(dots[i], params);
+
+        }
+
+        dots[0].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
+
+        top_slider.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+                for(int i = 0; i< dotscount; i++){
+                    dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.non_active_dot));
+                }
+
+                dots[position].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     private synchronized List<CourseModel> getCourseList() {//todo add just < 5 courses
@@ -185,6 +249,9 @@ public class MainActivity extends AppCompatActivity {
 
         //middle
         btn_course_plan = findViewById(R.id.h_view_plan);
+
+        top_slider =findViewById(R.id.top_slider);
+        top_dot_slider = findViewById(R.id.top_dot_slider);
 
         course_name = findViewById(R.id.h_course);
         course_duration = findViewById(R.id.h_duration);

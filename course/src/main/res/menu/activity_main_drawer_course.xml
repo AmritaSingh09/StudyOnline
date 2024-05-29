@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <group android:checkableBehavior="single"
+        >
+        <item android:title="GENERAL"
+            >
+            <menu>
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/rounded_home_app_logo_24"
+                    android:title="My Learning"
+                    />
+                <item
+                    android:id="@+id/e"
+                    android:icon="@drawable/round_person_24"
+                    android:title="Profile" />
+
+            </menu>
+
+        </item>
+
+        <item android:title="COURSE"
+            android:actionLayout="@layout/item_menu_navigation"
+            >
+            <menu>
+                <item
+                    android:id="@+id/nav_gallery"
+                    android:icon="@drawable/round_school_24"
+                    android:title="Course" />
+                <item
+                    android:id="@+id/b"
+                    android:icon="@drawable/round_calendar_view_month_24"
+                    android:title="Attendence" />
+                <item
+                    android:id="@+id/q"
+                    android:icon="@drawable/rounded_quiz_24"
+                    android:title="Quiz" />
+                <item
+                    android:id="@+id/qs"
+                    android:icon="@drawable/round_chat_24"
+                    android:title="Doubt" />
+            </menu>
+
+        </item>
+
+        <item android:title="OTHER">
+            <menu>
+
+                <item
+                    android:id="@+id/t"
+                    android:icon="@drawable/round_settings_24"
+                    android:title="Settings" />
+
+                <item
+                    android:id="@+id/qr"
+                    android:icon="@drawable/round_local_phone_24"
+                    android:title="Customer Support" />
+
+            </menu>
+
+        </item>
+
+        <item
+            android:id="@+id/qd"
+            android:icon="@drawable/round_info_outline_24"
+            android:title="About Us" />
+
+    </group>
+
+</menu>

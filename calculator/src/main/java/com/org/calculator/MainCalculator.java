@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
+import com.org.calculator.fragments.Calculator;
 import com.org.calculator.fragments.FragmentConversions;
 import com.org.calculator.fragments.FragmentMoney;
 import com.org.calculator.fragments.MainFragment;
@@ -26,7 +27,7 @@ public class MainCalculator extends AppCompatActivity {
         setContentView(R.layout.activity_main_calculator);
         initialize();
 
-        getSupportFragmentManager().beginTransaction().add(R.id.layout,new MainFragment()).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.layout,new Calculator()).commit();
         ctor_cal1.setVisibility(View.GONE);
         ctor_cal2.setVisibility(View.VISIBLE);
         ctor_pip.setOnClickListener(this::onClick);
@@ -48,12 +49,12 @@ public class MainCalculator extends AppCompatActivity {
             ctor_cal1.setVisibility(View.GONE);
             ctor_cat2.setVisibility(View.GONE);
             ctor_money2.setVisibility(View.GONE);
-            getSupportFragmentManager().beginTransaction().replace(R.id.layout, new MainFragment(),"pip").commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.layout, new Calculator(),"pip").commit();
             //todo: picture in picture mode
 
         } else
             if (id == R.id.ctor_cal) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.layout, new MainFragment(),"cal").commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.layout, new Calculator(),"cal").commit();
             ctor_pip.setVisibility(View.VISIBLE);
             ctor_more.setVisibility(View.VISIBLE);
 

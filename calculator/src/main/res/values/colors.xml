@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="blue0">#03045e</color>
+    <color name="blue1">#002d72</color>
+    <color name="blue2">#0077b6</color>
+    <color name="blue3">#00b4d8</color>
+    <color name="blue4">#90e0ef</color>
+    <color name="blue5">#caf0f8</color>
+    <color name="blue_main_bg">#F2F3FE</color>
+    <color name="blue_light">#F9FAFE</color>
+    <color name="blue_fg">#586BEC</color>
+    <color name="blue_bg2">#E1E6FC</color>
+    <color name="blue_white_light">#FAFBFE</color>
+
+    <color name="brown1">#3c3744</color>
+    <color name="cream1">#fbfff1</color>
+    <color name="red1">#d50032</color>
+    <color name="light_red">#d8315b</color>
+
+    <color name="white1">#AAB8C2</color>
+    <color name="white2">#E1E8ED</color>
+    <color name="white3">#F5F8FA</color>
+
+
+    <color name="purple_200">#0F9D58</color>
+    <color name="purple_500">#0F9D58</color>
+    <color name="purple_700">#0F9D58</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!--three different shades of black color-->
+    <color name="blac_shade_1">#292D36</color>
+    <color name="black_shade_2">#272B33</color>
+    <color name="black_shade_3">#22252D</color>
+    <color name="yellow">#ffa500</color>
+
+</resources>

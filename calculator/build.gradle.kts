@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.jetbrainsKotlinAndroid)
 }
 
 android {
@@ -28,6 +29,17 @@ android {
     }
     buildFeatures {
         viewBinding = true
+    }
+
+    //compileSdkVersion 30
+    // other android configurations...
+
+    kotlinOptions {
+        jvmTarget = "1.8" // Set the Kotlin compiler target compatibility to Java 8
+    }
+
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions.jvmTarget = "1.8" // Set the Java version target compatibility for Kotlin compilation
     }
 }
 

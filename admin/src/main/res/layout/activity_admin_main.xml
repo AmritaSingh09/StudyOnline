@@ -1,0 +1,1857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_white_light"
+    tools:context=".AdminMain"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_above="@id/home_btn_sheet"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/h_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/hamb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/round_notes_24"
+                        android:layout_gravity="end|top"
+                        android:background="@drawable/circle1"
+                        android:layout_margin="10dp"
+                        android:tint="@color/blue_main_bg"
+                        android:padding="5dp"
+                        android:backgroundTint="@color/blue_fg"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toStartOf="@+id/not"
+                        android:layout_toEndOf="@+id/hamb"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_centerVertical="true"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hello,"
+                            android:textSize="12sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/h_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Amrita Kumari"
+                            android:textColor="@color/blue_fg"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/not"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rounded_notification_add_24"
+                        android:layout_gravity="end|top"
+                        android:background="@drawable/circle1"
+                        android:layout_margin="10dp"
+                        android:tint="@color/blue_main_bg"
+                        android:padding="5dp"
+                        android:backgroundTint="@color/blue_fg"
+                        android:layout_alignParentEnd="true"
+                        />
+
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <!--androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/blue_fg"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                >
+
+
+
+
+            </androidx.cardview.widget.CardView-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                >
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/top_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/top_dot_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal|center_vertical"
+                    />
+
+            </LinearLayout>
+
+
+            <!-- custom card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/blue_fg"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Try New Courses"
+                    android:textColor="@color/blue_white_light"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- custom category -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="25dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Top Categories"
+                    android:textColor="#637A9F"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    />
+
+                <TextView
+                    android:id="@+id/h_category_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textColor="@color/blue2"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:id="@+id/h_ct_course"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rect_curve_20"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:elevation="3dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="7.5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical"
+                        android:backgroundTint="#EAFDFC"
+                        >
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/round_add_circle_outline_24"
+                            android:tint="#4D869C"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Courses"
+                            android:gravity="center"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:ellipsize="marquee"
+                            android:maxLines="1"
+                            android:textStyle="bold"
+                            android:textColor="#4D869C"
+                            android:textSize="12sp"
+                            />
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/add_h_ct_event"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rect_curve_20"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:elevation="3dp"
+                        android:layout_marginStart="7.5dp"
+                        android:layout_marginEnd="7.5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical"
+                        android:backgroundTint="#ADC4CE"
+                        >
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/round_add_circle_outline_24"
+                            android:tint="#144272"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Events"
+                            android:gravity="center"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:ellipsize="marquee"
+                            android:maxLines="1"
+                            android:textColor="#144272"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/h_ct_calc"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rect_curve_20"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:elevation="3dp"
+                        android:layout_marginStart="7.5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical"
+                        android:backgroundTint="#A3FFD6"
+                        >
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/round_add_circle_outline_24"
+                            android:tint="#176B87"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Calculator"
+                            android:gravity="center"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:ellipsize="marquee"
+                            android:maxLines="1"
+                            android:textColor="#176B87"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:id="@+id/h_ct_library"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rect_curve_20"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:elevation="3dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="7.5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical"
+                        android:backgroundTint="#FFE5F1"
+                        >
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/round_add_circle_outline_24"
+                            android:tint="#FB2576"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Library"
+                            android:gravity="center"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:ellipsize="marquee"
+                            android:maxLines="1"
+                            android:textColor="#FB2576"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/h_ct_quiz"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rect_curve_20"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:elevation="3dp"
+                        android:layout_marginStart="7.5dp"
+                        android:layout_marginEnd="7.5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical"
+                        android:backgroundTint="#FBF9F1"
+                        >
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/round_add_circle_outline_24"
+                            android:tint="#DD761C"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Quiz"
+                            android:gravity="center"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:ellipsize="marquee"
+                            android:maxLines="1"
+                            android:textColor="#DD761C"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/h_ct_calender"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rect_curve_20"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:elevation="3dp"
+                        android:layout_marginStart="7.5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical"
+                        android:backgroundTint="#E5D1FA"
+                        >
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/round_add_circle_outline_24"
+                            android:tint="#472183"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Calender"
+                            android:gravity="center"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:ellipsize="marquee"
+                            android:maxLines="1"
+                            android:textColor="#472183"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- course outline -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#FFF9D0"
+                app:cardCornerRadius="20dp"
+                app:cardUseCompatPadding="true"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                app:cardElevation="3dp"
+                android:background="#FFF9D0"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp"
+                        app:cardBackgroundColor="#FFFEFF"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/d"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/round_add_circle_outline_24"
+                                    android:layout_margin="10dp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/d1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Master of Computer Application "
+                                    android:textColor="#637A9F"
+                                    android:layout_toEndOf="@id/d"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="5dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:textSize="12sp"
+                                    />
+                                <TextView
+                                    android:id="@+id/h_course"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="(MCA)"
+                                    android:textColor="#637A9F"
+                                    android:textStyle="bold"
+                                    android:layout_toEndOf="@id/d1"
+                                    android:layout_toStartOf="@id/h_view_plan"
+                                    android:layout_centerVertical="true"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    />
+                                <ImageView
+                                    android:id="@+id/h_view_plan"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/rounded_keyboard_arrow_right_24"
+                                    app:tint="@color/blue_fg"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    />
+
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="15dp"
+                                >
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.1"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Duration"
+                                        android:textSize="11sp"
+                                        android:textColor="#1C1C1C"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/h_duration"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2023-25"
+                                        android:layout_marginTop="2dp"
+                                        android:textStyle="bold"
+                                        android:textColor="#A25772"
+                                        android:textSize="14sp"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/h_left_duration"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="left 395 days"
+                                        android:textSize="11sp"
+                                        android:layout_marginTop="2dp"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/h_working_days"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Working days 90"
+                                        android:layout_marginTop="7dp"
+                                        android:textSize="11sp"
+                                        android:layout_marginBottom="2dp"
+                                        android:textColor="#164863"
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.1"
+                                    android:gravity="center">
+
+                                    <View
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#F0F0F0"
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.1"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Fees due"
+                                        android:textSize="11sp"
+                                        android:textColor="#1C1C1C"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/h_price"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Rs.5,00,000"
+                                        android:layout_marginTop="2dp"
+                                        android:textStyle="bold"
+                                        android:textColor="#164863"
+                                        android:textSize="15sp"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/h_left_price"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3,00,000 dues"
+                                        android:textSize="11sp"
+                                        android:layout_marginTop="5dp"
+                                        />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="150dp"
+                                android:layout_height="2dp"
+                                android:background="#F1F1F1"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="8dp"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                >
+
+                                <LinearLayout
+                                    android:id="@+id/h_course_material"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:layout_marginEnd="7.5dp"
+                                    android:layout_marginStart="5dp"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/round_add_circle_outline_24"
+                                        android:padding="5dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Material"
+                                        android:gravity="center"
+                                        android:textColor="@color/brown1"
+                                        android:layout_marginTop="7dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:maxLines="1"
+                                        android:ellipsize="end"
+                                        android:textSize="12sp"
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/h_course_mock"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:layout_marginStart="7.5dp"
+                                    android:layout_marginEnd="7.5dp"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/round_add_circle_outline_24"
+                                        android:padding="2dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Mock"
+                                        android:gravity="center"
+                                        android:textColor="@color/brown1"
+                                        android:layout_marginTop="7dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:maxLines="1"
+                                        android:ellipsize="end"
+                                        android:textSize="12sp"
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/h_course_result"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:layout_marginStart="7.5dp"
+                                    android:layout_marginEnd="7.5dp"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/round_add_circle_outline_24"
+                                        android:padding="2dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Results"
+                                        android:gravity="center"
+                                        android:textColor="@color/brown1"
+                                        android:layout_marginTop="7dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:maxLines="1"
+                                        android:ellipsize="end"
+                                        android:textSize="12sp"
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/h_course_attendence"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:layout_marginStart="7.5dp"
+                                    android:layout_marginEnd="15dp"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/round_add_circle_outline_24"
+                                        app:civ_border_width="2dp"
+                                        app:civ_border_color="@color/blue_fg"
+                                        android:padding="2dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Attendance"
+                                        android:gravity="center"
+                                        android:textColor="@color/brown1"
+                                        android:layout_marginTop="7dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:maxLines="1"
+                                        android:ellipsize="end"
+                                        android:textSize="12sp"
+                                        />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/h_course_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Description: Freebees available with the courses"
+                        android:gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="12sp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--  courses -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="25dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Courses"
+                    android:textColor="#637A9F"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    />
+
+                <TextView
+                    android:id="@+id/h_course_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textColor="@color/blue2"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/h_course_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginTop="15dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_curve_20"
+                    android:elevation="3dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="7.5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="20dp"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/round_add_circle_outline_24"
+                            android:layout_gravity="center"
+                            android:background="#D9DDFB"
+                            android:scaleType="centerCrop"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/rounded_bookmark_24"
+                            android:layout_gravity="end|top"
+                            android:background="@drawable/circle1"
+                            android:layout_margin="10dp"
+                            app:tint="@color/blue3"
+                            android:padding="2dp"
+                            android:backgroundTint="@color/blue_main_bg"
+                            />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Java\nCourse"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24 hours"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="1dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="11sp"
+                        android:textColor="#838585"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4.9*"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="10sp"
+                        android:textColor="#B23797CA"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_curve_20"
+                    android:elevation="3dp"
+                    android:layout_marginStart="7.5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="20dp"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/round_add_circle_outline_24"
+                            android:layout_gravity="center"
+                            android:background="#D9DDFB"
+                            android:scaleType="centerCrop"
+                            />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/rounded_bookmark_24"
+                            android:layout_gravity="end|top"
+                            android:background="@drawable/circle1"
+                            android:layout_margin="10dp"
+                            app:tint="@color/blue3"
+                            android:padding="2dp"
+                            android:backgroundTint="@color/blue_main_bg"
+                            />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Java\nCourse"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="1dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="By Amrita Kumari"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="1dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="11sp"
+                        android:textColor="#838585"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12 hours"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="10sp"
+                        android:textColor="#B23797CA"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Library -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/h_library_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="#9195F6"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/round_add_circle_outline_24"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginVertical="10dp"
+                        android:padding="7dp"
+                        android:tint="@color/blue_white_light"
+                        />
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#9EB8D9"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="10dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingHorizontal="5dp"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Online Library"
+                            android:textColor="@color/blue_white_light"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:drawableEnd="@drawable/rounded_keyboard_arrow_right_24"
+                            android:drawableTint="@color/blue_white_light"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Access your library and free contents till the course duration"
+                            android:textColor="@color/blue_white_light"
+                            android:textSize="13sp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="15dp"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- custom study material -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="25dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Study Material"
+                    android:textColor="#637A9F"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    />
+
+                <TextView
+                    android:id="@+id/h_study_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textColor="@color/blue2"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/h_material_note"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="7.5dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/rect_curve_10"
+                            android:backgroundTint="#CDE8E5"
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Class\nNotes"
+                                android:maxLines="2"
+                                android:gravity="center"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:textColor="#4D869C"
+                                android:textSize="11sp"
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/round_notes_24"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#CDE8E5"
+                            android:padding="3dp"
+                            android:layout_centerHorizontal="true"
+                            app:civ_circle_background_color="#B792FA"
+                            android:tint="#CDE8E5"
+                            android:background="@drawable/rect_curve_20"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/h_material_test"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="7.5dp"
+                        android:layout_marginEnd="7.5dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/rect_curve_10"
+                            android:backgroundTint="#FFC7EA"
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Class\nTests"
+                                android:maxLines="2"
+                                android:gravity="center"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:textColor="#9D44C0"
+                                android:textSize="11sp"
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/round_notes_24"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#FFC7EA"
+                            android:padding="3dp"
+                            android:layout_centerHorizontal="true"
+                            app:civ_circle_background_color="#FFC7EA"
+                            android:tint="#9D44C0"
+                            android:background="@drawable/rect_curve_20"
+                            />
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/h_material_assignment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="7.5dp"
+                        android:layout_marginEnd="7.5dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/rect_curve_10"
+                            android:backgroundTint="#EEEEEE"
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Class\nAssignments"
+                                android:maxLines="2"
+                                android:gravity="center"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:textColor="#2E4374"
+                                android:textSize="11sp"
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/round_notes_24"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#EEEEEE"
+                            android:padding="3dp"
+                            android:layout_centerHorizontal="true"
+                            app:civ_circle_background_color="#EEEEEE"
+                            android:tint="#2E4374"
+                            android:background="@drawable/rect_curve_20"
+                            />
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/h_material_result"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="7.5dp"
+                        android:layout_marginEnd="15dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/rect_curve_10"
+                            android:backgroundTint="#E2F6CA"
+                            >
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Class\nResults"
+                                android:maxLines="2"
+                                android:gravity="center"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:textColor="#139487"
+                                android:textSize="11sp"
+                                />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/round_notes_24"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#E2F6CA"
+                            android:padding="3dp"
+                            android:layout_centerHorizontal="true"
+                            app:civ_circle_background_color="#E2F6CA"
+                            android:tint="#139487"
+                            android:background="@drawable/rect_curve_20"
+                            />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- custom Calender -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/blue_fg"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                >
+
+                <!--TODO:  Add Calender  of 7 days and expendable for 30 days -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Add Calender  of 7 days and \nexpendable for 30 days"
+                    android:textColor="@color/blue_white_light"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- custom teachers -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="25dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Top Mentors"
+                    android:textColor="#637A9F"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    />
+
+                <TextView
+                    android:id="@+id/h_mentor_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textColor="@color/blue2"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/h_mentor_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginTop="15dp"
+                />
+
+            <!--<androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@color/blue_main_bg"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginEnd="7dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/round_person_24"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#7EA1FF"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            android:background="#7EA1FF"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:textColor="@color/blue_light"
+                                />
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:src="@drawable/round_star_rate_24"
+                                android:layout_gravity="center"
+                                app:tint="@color/blue_light"
+                                />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@color/blue_main_bg"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginVertical="10dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/round_person_24"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#7EA1FF"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            android:background="#7EA1FF"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:textColor="@color/blue_light"
+                                />
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:src="@drawable/round_star_rate_24"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:padding="0dp"
+                                app:tint="@color/blue_light"
+                                />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@color/blue_main_bg"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginVertical="10dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/round_person_24"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#7EA1FF"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            android:background="#7EA1FF"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:textColor="@color/blue_light"
+                                />
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:src="@drawable/round_star_rate_24"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:padding="0dp"
+                                app:tint="@color/blue_light"
+                                />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@color/blue_main_bg"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginVertical="10dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/round_person_24"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#7EA1FF"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            android:background="#7EA1FF"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:textColor="@color/blue_light"
+                                />
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:src="@drawable/round_star_rate_24"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:padding="0dp"
+                                app:tint="@color/blue_light"
+                                />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@color/blue_main_bg"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginEnd="7dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/round_person_24"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#7EA1FF"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            android:background="#7EA1FF"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:textColor="@color/blue_light"
+                                />
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:src="@drawable/round_star_rate_24"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:padding="0dp"
+                                app:tint="@color/blue_light"
+                                />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@color/blue_main_bg"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginVertical="10dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/round_person_24"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#7EA1FF"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            android:background="#7EA1FF"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:textColor="@color/blue_light"
+                                />
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:src="@drawable/round_star_rate_24"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:padding="0dp"
+                                app:tint="@color/blue_light"
+                                />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@color/blue_main_bg"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginVertical="10dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/round_person_24"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#7EA1FF"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            android:background="#7EA1FF"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:textColor="@color/blue_light"
+                                />
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:src="@drawable/round_star_rate_24"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:padding="0dp"
+                                app:tint="@color/blue_light"
+                                />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardBackgroundColor="@color/blue_main_bg"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginEnd="14dp"
+                        android:layout_marginVertical="10dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/round_person_24"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#7EA1FF"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="center"
+                            android:background="#7EA1FF"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                android:textColor="@color/blue_light"
+                                />
+
+                            <ImageView
+                                android:layout_width="13dp"
+                                android:layout_height="13dp"
+                                android:src="@drawable/round_star_rate_24"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="0dp"
+                                android:padding="0dp"
+                                app:tint="@color/blue_light"
+                                />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/blue_white_light"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contents at the \nbottom about coming soon"
+                    android:textColor="#9A9BA1"
+                    android:textSize="19sp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_btn_sheet"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+        <include layout="@layout/home_btm_sheet"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

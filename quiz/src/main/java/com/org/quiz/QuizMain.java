@@ -1,20 +1,20 @@
-package com.org.admin;
+package com.org.quiz;
 
 import android.os.Bundle;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity2 extends AppCompatActivity {
+public class QuizMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main2);
-
-        Toast.makeText(this, "Hello From Admin", Toast.LENGTH_SHORT).show();
+        setContentView(R.layout.activity_quiz_main);
 
     }
 }

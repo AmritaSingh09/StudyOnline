@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AllCourseActivity"
+    android:orientation="vertical"
+    >
+
+    <!-- TODO:
+     1. SEARCH VIEW
+     2.CATEGORY SELECTION
+     3. FILTER
+     4. DURATION SELECTION
+     5. RATING FILTERING
+     6. LANGUAGE FILTERING
+     7. GIVE OPTIONS TO BUY NOW OR ADD TO CART
+     update cart as per go
+     -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="All Course listing with categories"
+        />
+
+    <EditText
+        android:id="@+id/search_course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/all_course_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="20dp"
+        />
+
+
+</LinearLayout>
