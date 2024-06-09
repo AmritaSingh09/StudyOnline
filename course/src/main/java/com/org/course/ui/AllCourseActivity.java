@@ -31,7 +31,7 @@ public class AllCourseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_all_course);
 
         all_course_list = findViewById(R.id.all_course_list);
@@ -60,13 +60,13 @@ public class AllCourseActivity extends AppCompatActivity {
         lang.add("Tamil");
         lang.add("Oodiya");
 
-        courseModelList.add(new CourseModel("Machine Learning", "Amrita Kumari", 5.2f, cate.subList(2,3), lang.subList(2,3),"123", true));
-        courseModelList.add(new CourseModel("Deep Learning", "Amrita Kumari", 5.2f, cate.subList(0,2), lang.subList(0,2),"1234", true));
-        courseModelList.add(new CourseModel("ANN Learning", "Amrita Kumari", 5.2f, cate.subList(1,3), lang.subList(2,7),"1223", true));
-        courseModelList.add(new CourseModel("DSA", "Amrita Kumari", 5.2f, cate.subList(4,7), lang.subList(2,10),"1423", true));
-        courseModelList.add(new CourseModel("Machine Learning In Python and R", "Amrita Kumari", 5.2f, cate, lang,"1273", true));
-        courseModelList.add(new CourseModel("Software Engineering with agile using scrum", "Amrita Kumari", 5.2f, cate.subList(2,3), lang.subList(1,7),"1283", true));
-        courseModelList.add(new CourseModel("Data Structure and Algorithm", "Amrita Kumari", 5.2f, cate, lang.subList(2,3),"1243", true));
+        courseModelList.add(new CourseModel("Machine Learning", "Amrita Kumari", "Short Description is here and will be described later",5.2f,cate.subList(2,3), lang.subList(2,3),"123", true));
+        courseModelList.add(new CourseModel("Deep Learning", "Amrita Kumari", "Learn to create Deep Learning models in Python from two Machine Learning, Data Science experts. Code templates included.", 5.2f, cate.subList(0,2), lang.subList(0,2),"1234", true));
+        courseModelList.add(new CourseModel("ANN Learning", "Amrita Kumari", "Learn to create Deep Learning models in Python from two Machine Learning, Data Science experts. Code templates included.", 5.2f, cate.subList(1,3), lang.subList(2,7),"1223", true));
+        courseModelList.add(new CourseModel("DSA", "Amrita Kumari","Learn to create Deep Learning models in Python from two Machine Learning, Data Science experts. Code templates included.", 5.2f, cate.subList(4,7), lang.subList(2,10),"1423", true));
+        courseModelList.add(new CourseModel("Machine Learning In Python and R", "Amrita Kumari", "Learn to create Deep Learning models in Python from two Machine Learning, Data Science experts. Code templates included.", 5.2f, cate, lang,"1273", true));
+        courseModelList.add(new CourseModel("Software Engineering with agile using scrum", "Amrita Kumari", "Learn to create Deep Learning models in Python from two Machine Learning, Data Science experts. Code templates included.", 5.2f, cate.subList(2,3), lang.subList(1,7),"1283", true));
+        courseModelList.add(new CourseModel("Data Structure and Algorithm", "Amrita Kumari","Learn to create Deep Learning models in Python from two Machine Learning, Data Science experts. Code templates included.", 5.2f, cate, lang.subList(2,3),"1243", true));
 
         adapter = new CourseAdapter(courseModelList, AllCourseActivity.this);
 

@@ -5,20 +5,29 @@ import java.util.List;
 
 public class CourseModel implements Serializable {
 
-    private String name, author;
+    private String name, author, desc;
     private Float duration;
-    private List<String> categories, languages;
+    //private List<String> categories, languages;
     private String id;
     private boolean isAvailable;
 
-    public CourseModel(String name, String author, Float duration, List<String> categories, List<String> languages, String id, boolean isAvailable) {
+    public CourseModel(String name, String author, String desc, Float duration, List<String> categories, List<String> languages, String id, boolean isAvailable) {
         this.name = name;
         this.author = author;
+        this.desc = desc;
         this.duration = duration;
-        this.categories = categories;
-        this.languages = languages;
+        //this.categories = categories;
+        //this.languages = languages;
         this.id = id;
         this.isAvailable = isAvailable;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
     public String getName() {
@@ -45,7 +54,7 @@ public class CourseModel implements Serializable {
         this.duration = duration;
     }
 
-    public List<String> getCategories() {
+ /*   public List<String> getCategories() {
         return categories;
     }
 
@@ -59,7 +68,7 @@ public class CourseModel implements Serializable {
 
     public void setLanguages(List<String> languages) {
         this.languages = languages;
-    }
+    }*/
 
     public String getId() {
         return id;
@@ -75,5 +84,19 @@ public class CourseModel implements Serializable {
 
     public void setAvailable(boolean available) {
         isAvailable = available;
+    }
+
+    @Override
+    public String toString() {
+        return "CourseModel{" +
+                "name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                ", desc='" + desc + '\'' +
+                ", duration=" + duration +
+                //", categories=" + categories +
+                //", languages=" + languages +
+                ", id='" + id + '\'' +
+                ", isAvailable=" + isAvailable +
+                '}';
     }
 }

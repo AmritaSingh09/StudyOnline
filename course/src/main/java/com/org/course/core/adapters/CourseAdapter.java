@@ -1,12 +1,14 @@
 package com.org.course.core.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.org.course.R;
 import com.org.course.core.models.CourseModel;
+import com.org.course.ui.NewCourseDetailActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,9 +45,9 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
         CourseModel model = filteredList.get(position);
         holder.c_name.setText(model.getName());
         holder.c_author.setText(model.getAuthor());
-        holder.c_lang.setText(model.getLanguages().stream().collect(Collectors.joining(",")));
+        //holder.c_lang.setText(model.getLanguages().stream().collect(Collectors.joining(",")));
         holder.c_dur.setText(model.getDuration()+" hours");
-        holder.c_cate.setText(String.join(",", model.getCategories()));
+        //holder.c_cate.setText(String.join(",", model.getCategories()));
     }
 
     @Override
@@ -66,8 +69,8 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
                     for (CourseModel model: courseList) {
                         if (model.getName().toLowerCase().contains(filText)||
                                 model.getAuthor().toLowerCase().contains(filText)||
-                                Arrays.toString(model.getCategories().toArray()).toLowerCase().contains(filText)||
-                                Arrays.toString(model.getLanguages().toArray()).toLowerCase().contains(filText)||
+                                //Arrays.toString(model.getCategories().toArray()).toLowerCase().contains(filText)||
+                                //Arrays.toString(model.getLanguages().toArray()).toLowerCase().contains(filText)||
                                 model.getName().toLowerCase().contains(filText)){
                             models.add(model);
                         }
@@ -87,7 +90,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
         };
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView c_name, c_author,c_lang, c_dur, c_cate;
 
          public ViewHolder(@NonNull View itemView) {
@@ -97,6 +100,13 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
              c_lang = itemView.findViewById(R.id.c_lang);
              c_dur = itemView.findViewById(R.id.c_dur);
              c_cate = itemView.findViewById(R.id.c_cate);
+             itemView.setOnClickListener(this);
          }
-     }
+
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(context, "Model is: "+filteredList.get(getAdapterPosition()), Toast.LENGTH_SHORT).show();
+             context.startActivity(new Intent(context, NewCourseDetailActivity.class).putExtra("courseDataModel",filteredList.get(getAdapterPosition())));
+        }
+    }
 }

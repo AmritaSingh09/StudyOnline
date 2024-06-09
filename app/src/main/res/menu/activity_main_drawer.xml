@@ -13,15 +13,15 @@
                     android:icon="@drawable/rounded_home_app_logo_24"
                     android:title="@string/menu_home" />
                 <item
-                    android:id="@+id/c"
+                    android:id="@+id/nav_notification"
                     android:icon="@drawable/round_notifications_24"
                     android:title="Notification" />
                 <item
-                    android:id="@+id/bv"
+                    android:id="@+id/nav_calendar"
                     android:icon="@drawable/round_calendar_month_24"
                     android:title="Calender" />
                 <item
-                    android:id="@+id/e"
+                    android:id="@+id/nav_profile"
                     android:icon="@drawable/round_person_24"
                     android:title="Profile" />
 
@@ -33,35 +33,35 @@
             >
             <menu>
                 <item
-                    android:id="@+id/nav_gallery"
+                    android:id="@+id/nav_course"
                     android:icon="@drawable/round_school_24"
                     android:title="Course" />
                 <item
-                    android:id="@+id/a"
+                    android:id="@+id/nav_events"
                     android:icon="@drawable/round_golf_course_24"
                     android:title="Events" />
                 <item
-                    android:id="@+id/b"
+                    android:id="@+id/nav_attendance"
                     android:icon="@drawable/round_calendar_view_month_24"
                     android:title="Attendence" />
                 <item
-                    android:id="@+id/y"
+                    android:id="@+id/nav_results"
                     android:icon="@drawable/ic_menu_slideshow"
                     android:title="Results" />
                 <item
-                    android:id="@+id/i"
+                    android:id="@+id/nav_library"
                     android:icon="@drawable/rounded_bookmark_24"
                     android:title="Library" />
                 <item
-                    android:id="@+id/q"
+                    android:id="@+id/nav_quiz"
                     android:icon="@drawable/rounded_quiz_24"
                     android:title="Quiz" />
                 <item
-                    android:id="@+id/v"
+                    android:id="@+id/nav_study_material"
                     android:icon="@drawable/ic_menu_gallery"
                     android:title="Study Material" />
                 <item
-                    android:id="@+id/qs"
+                    android:id="@+id/nav_doubts"
                     android:icon="@drawable/round_chat_24"
                     android:title="Doubt" />
             </menu>
@@ -72,21 +72,21 @@
             <menu>
 
                 <item
-                    android:id="@+id/w"
+                    android:id="@+id/nav_personal_reminders"
                     android:icon="@drawable/round_my_location_24"
                     android:title="Personal Reminders" />
 
                 <item
-                    android:id="@+id/t"
+                    android:id="@+id/nav_settings"
                     android:icon="@drawable/round_settings_24"
                     android:title="Settings" />
 
                 <item
-                    android:id="@+id/qr"
+                    android:id="@+id/nav_customer_support"
                     android:icon="@drawable/round_local_phone_24"
                     android:title="Customer Support" />
                 <item
-                    android:id="@+id/qd"
+                    android:id="@+id/nav_about_us"
                     android:icon="@drawable/round_info_outline_24"
                     android:title="About Us" />
 
@@ -97,7 +97,7 @@
         </item>
 
         <item
-            android:id="@+id/qc"
+            android:id="@+id/nav_logout"
             android:icon="@drawable/rounded_logout_24"
             android:title="Logout" />
 

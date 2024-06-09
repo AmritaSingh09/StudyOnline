@@ -15,6 +15,10 @@
     <color name="blue_bg2">#E1E6FC</color>
     <color name="blue_white_light">#FAFBFE</color>
 
+    <color name="grey">#a0a0a0</color>
+    <color name="calendar_number">#424A56</color>
+    <color name="pink">#FF4081</color>
+
     <color name="brown1">#3c3744</color>
     <color name="cream1">#fbfff1</color>
     <color name="red1">#d50032</color>

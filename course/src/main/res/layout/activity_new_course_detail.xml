@@ -6,9 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.NewCourseDetailActivity">
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@id/btm"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,16 +19,43 @@
             >
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="160dp"
                 >
-                <ImageView
+                <VideoView
+                    android:id="@+id/new_c_intro_vid"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:src="@drawable/banner1"
-                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
                     />
 
+
+                <!--If preview is available then load this video view or else change the visiblity -->
+                <FrameLayout
+                    android:id="@+id/new_c_img_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    >
+                    <ImageView
+                        android:id="@+id/new_c_thumbnail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/banner1"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <ImageView
+                        android:id="@+id/new_c_play_vid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/round_play_circle_24"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:background="@color/white1"/>
+                </FrameLayout>
+
                 <ImageView
+                    android:id="@+id/new_c_bookmark"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/rounded_bookmark_24"
@@ -41,9 +70,10 @@
             </FrameLayout>
 
             <TextView
+                android:id="@+id/new_c_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Title of The Course"
+                android:text="Deep Learning A-Z 2024: Neural Networks, AI and ChatGPT Prize"
                 android:textStyle="bold"
                 android:textColor="#3C3B3B"
                 android:textSize="18sp"
@@ -52,28 +82,96 @@
                 />
 
             <TextView
+                android:id="@+id/new_c_short_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Description of The Course Machine learning (ML) is a discipline of artificial intelligence (AI) that provides machines with the ability to automatically learn from data
-Machine learning (ML) is a discipline of artificial intelligence (AI) that provides machines with the ability to automatically learn from data
-Machine learning (ML) is a discipline of artificial intelligence (AI) that provides machines with the ability to automatically learn from data
-Machine learning (ML) is a discipline of artificial intelligence (AI) that provides machines with the ability to automatically learn from data
-The Course Machine learning (ML) is a discipline of artificial intelligence (AI) that provides machines with the ability to automatically learn from data
-Machine learning (ML) is a discipline of artificial intelligence (AI) that provides machines with the ability to automatically learn from data
-Machine learning (ML) is a discipline of artificial intelligence (AI) that provides machines with the ability to automatically learn from data
-Machine learning (ML) is a discipline of artificial intelligence (AI) that provides machines with the ability to automatically learn from data
-"
+                android:text="Learn to create Deep Learning models in Python from two Machine Learning, Data Science experts. Code templates included."
                 android:textColor="#5A5959"
                 android:textSize="14sp"
                 android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="7dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blue5"
+                android:layout_marginBottom="5dp"
                 android:layout_marginTop="10dp"
                 />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:id="@+id/new_c_auther_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/round_person_24"
+                    android:background="@drawable/circle1"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:padding="5dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="10dp"
+                    >
+                    <TextView
+                        android:id="@+id/new_c_auther_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Author name"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue_fg"
+                        android:layout_marginEnd="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/new_c_auther_expert"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="(Author Designation or expertiese)"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:textColor="@color/brown1"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="12sp"
+                        />
+                    <TextView
+                        android:id="@+id/new_c_auther_short_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Short Description of the author \nThis may contain 2 line"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/white1"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/blue5"
+                android:layout_marginVertical="5dp"
+                />
+
             <!-- TODO
-            COURSE PREVIEW (SMALL VIDEO CLIP OR TEXT CLIP)
+            //COURSE PREVIEW (SMALL VIDEO CLIP OR TEXT CLIP)
             Description about the course all the listing with the users enrolled
-            RATING
-            REVIEWS
             FAQS
             COURSE CONTENTS
             SUB CONTENTS
@@ -100,16 +198,596 @@ Machine learning (ML) is a discipline of artificial intelligence (AI) that provi
             WISHLIST
             -->
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This Course include:"
+                android:textStyle="bold"
+                android:textColor="#3C3B3B"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:id="@+id/new_c_includes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  • 22.5 hours on-demand video\n
+ • 34 articles\n
+ • 3 downloadable resources\n
+ • Access on mobile and TV\n
+ • Full lifetime access\n
+ • Certificate of completion"
+                android:textColor="#5A5959"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="7dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Requirements: "
+                android:textStyle="bold"
+                android:textColor="#3C3B3B"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/new_c_rv_requirement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+            <!--TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  • High school mathematics level
+\n  • A Basic Python programming knowledge "
+                android:textColor="#5A5959"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="7dp"
+                /-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What you will learn"
+                android:textStyle="bold"
+                android:textColor="#3C3B3B"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/new_c_rv_outcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+            <!--TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  • Understand the intuition behind Artificial Neural Networks
+\n  • Apply Artificial Neural Networks in practice
+\n  • Understand the intuition behind Convolutional Neural Networks
+\n  • Apply Convolutional Neural Networks in practice
+\n  • Understand the intuition behind Recurrent Neural Networks
+\n  • Apply Recurrent Neural Networks in practice
+\n  • Understand the intuition behind Self-Organizing Maps
+\n  • Apply Self-Organizing Maps in practice
+\n  • Understand the intuition behind Boltzmann Machines
+\n  • Apply Boltzmann Machines in practice
+\n  • Understand the intuition behind AutoEncoders
+\n  • Apply AutoEncoders in practice"
+                android:textColor="#5A5959"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="7dp"
+                /-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Course Contents"
+                android:textStyle="bold"
+                android:textColor="#3C3B3B"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                />
+            <TextView
+                android:id="@+id/new_c_course_content_overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="27 sections • 192 lectures • 22h 47m total length"
+                android:textStyle="italic"
+                android:textColor="#808080"
+                android:textSize="13sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="7dp"
+                />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/new_c_rv_contents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+            <!--TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#5A5959"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="7dp"
+                android:text="Welcome Challenge!    02:07
+\nGet the Datasets here   00:05
+\nEXTRA: Use ChatGPT to Boost your Deep Learning Skills 00:24
+\nWelcome to Part 1 - Artificial Neural Networks
+    00:07
+\nWhat You'll Need for ANN
+    00:07
+\nPlan of Attack
+    02:51
+\nThe Neuron
+    16:15
+\nThe Activation Function
+    08:29
+\nHow do Neural Networks learn?
+    12:58
+Gradient Descent
+    10:12
+Stochastic Gradient Descent
+    08:44
+Backpropagation
+    05:21
+Business Problem Description
+    04:59
+IMPORTANT NOTE
+    00:59
+Building an ANN - Step 1
+    10:21
+Check out our free course on ANN for Regression
+    00:11
+Building an ANN - Step 2
+    18:36
+Building an ANN - Step 3
+    14:28
+Building an ANN - Step 4
+    11:58
+Building an ANN - Step 5
+    16:25
+Welcome to Part 2 - Convolutional Neural Networks
+    00:07
+What You'll Need for CNN
+    00:07
+Plan of attack
+    03:31
+What are convolutional neural networks?
+    15:49
+    16:38
+Step 1(b) - ReLU Layer
+    06:41
+Step 2 - Pooling
+    14:13
+Step 3 - Flattening
+    01:52
+    19:24
+Summary
+    04:19
+Softmax and Cross-Entropy
+    18:20
+IMPORTANT NOTE
+    00:49
+Building a CNN - Step 1
+11:35
+Building a CNN - Step 2
+17:46
+Building a CNN - Step 3
+17:56
+Building a CNN - Step 4
+07:21
+Building a CNN - Step 5
+14:55
+Quick Note
+00:46
+Building a CNN - FINAL DEMO!
+23:38
+Welcome to Part 3 - Recurrent Neural Networks
+00:38
+What You'll Need for RNN
+00:07
+Plan of attack
+02:32
+The Vanishing Gradient Problem
+14:27
+LSTMs
+19:47
+Practical intuition
+15:11
+EXTRA: LSTM Variations
+03:36
+IMPORTANT NOTE
+00:57
+Building a RNN - Step 1
+06:29
+Building a RNN - Step 2
+07:04
+Building a RNN - Step 3
+05:57
+Building a RNN - Step 4
+14:23
+Building a RNN - Step 5
+10:40
+Building a RNN - Step 6
+02:50
+Building a RNN - Step 7
+08:42
+Building a RNN - Step 8
+05:20
+Building a RNN - Step 9
+03:20
+Building a RNN - Step 10
+04:21
+Building a RNN - Step 11
+10:31
+Building a RNN - Step 12
+05:22
+Building a RNN - Step 13
+16:50
+Building a RNN - Step 14
+08:15
+Building a RNN - Step 15
+09:36
+Evaluating the RNN
+01:08
+Improving the RNN
+00:56
+Welcome to Part 4 - Self Organizing Maps
+00:09
+Plan of attack
+03:10
+How do Self-Organizing Maps Work?
+08:30
+Why revisit K-Means?
+02:19
+K-Means Clustering (Refresher)
+14:17
+09:37
+Live SOM example
+04:28
+Reading an Advanced SOM
+14:26
+EXTRA: K-means Clustering (part 2)
+07:48
+EXTRA: K-means Clustering (part 3)
+11:51
+How to get the dataset
+01:32
+Building a SOM - Step 1
+13:41
+Building a SOM - Step 2
+09:39
+Building a SOM - Step 3
+17:25
+Building a SOM - Step 4
+11:12
+Mega Case Study - Step 1
+02:49
+Mega Case Study - Step 2
+04:16
+Mega Case Study - Step 3
+14:37
+Mega Case Study - Step 4
+09:02
+Welcome to Part 5 - Boltzmann Machines
+00:47
+Plan of attack
+02:24
+Boltzmann Machine
+14:22
+Energy-Based Models (EBM)
+10:39
+Editing Wikipedia - Our Contribution to the World
+03:28
+Contrastive Divergence
+16:28
+Deep Belief Networks
+05:23
+Deep Boltzmann Machines
+02:57
+How to get the dataset
+01:32
+Installing PyTorch
+00:42
+Building a Boltzmann Machine - Introduction
+09:09
+Same Data Preprocessing in Parts 5 and 6
+00:14
+Building a Boltzmann Machine - Step 1
+09:13
+Building a Boltzmann Machine - Step 2
+09:40
+Building a Boltzmann Machine - Step 3
+08:21
+Building a Boltzmann Machine - Step 4
+20:53
+Building a Boltzmann Machine - Step 5
+05:05
+Building a Boltzmann Machine - Step 6
+07:33
+Building a Boltzmann Machine - Step 7
+10:13
+Building a Boltzmann Machine - Step 8
+12:36
+Building a Boltzmann Machine - Step 9
+06:17
+Building a Boltzmann Machine - Step 10
+11:34
+Building a Boltzmann Machine - Step 11
+06:57
+Building a Boltzmann Machine - Step 12
+13:23
+Building a Boltzmann Machine - Step 13
+18:42
+Building a Boltzmann Machine - Step 14
+17:10
+Evaluating the Boltzmann Machine
+01:39
+Welcome to Part 6 - AutoEncoders
+00:32
+Plan of attack
+02:12
+10:50
+A Note on Biases
+01:15
+Training an Auto Encoder
+06:10
+Overcomplete hidden layers
+03:52
+Sparse Autoencoders
+06:15
+Denoising Autoencoders
+02:32
+Contractive Autoencoders
+02:23
+Stacked Autoencoders
+01:54
+Deep Autoencoders
+01:50
+How to get the dataset
+01:32
+Installing PyTorch
+00:43
+Same Data Preprocessing in Parts 5 and 6
+00:14
+Building an AutoEncoder - Step 1
+12:04
+Building an AutoEncoder - Step 2
+11:49
+Building an AutoEncoder - Step 3
+08:21
+Homework Challenge - Coding Exercise
+00:55
+Building an AutoEncoder - Step 4
+20:51
+Building an AutoEncoder - Step 5
+05:04
+Building an AutoEncoder - Step 6
+16:45
+Building an AutoEncoder - Step 7
+13:37
+Building an AutoEncoder - Step 8
+15:05
+Building an AutoEncoder - Step 9
+13:32
+Building an AutoEncoder - Step 10
+04:21
+Building an AutoEncoder - Step 11
+11:26
+THANK YOU Video
+02:40
+Annex - Get the Machine Learning Basics
+00:27
+What You Need for Regression Classification
+00:09
+Simple Linear Regression Intuition - Step 1
+05:45
+Simple Linear Regression Intuition - Step 2
+03:09
+Multiple Linear Regression Intuition
+01:02
+Logistic Regression Intuition
+17:06
+Data Preprocessing
+00:22
+The Machine Learning process
+01:31
+Splitting the data into a Training and Test set
+02:02
+Feature Scaling
+06:27
+Getting Started - Step 1
+05:21
+Getting Started - Step 2
+05:21
+Importing the Libraries
+03:34
+Importing the Dataset - Step 1
+05:13
+Importing the Dataset - Step 2
+04:42
+Importing the Dataset - Step 3
+05:46
+For Python learners, summary of Object-oriented programming: classes and objects
+01:03
+Taking care of Missing Data - Step 1
+05:56
+Taking care of Missing Data - Step 2
+05:58
+Encoding Categorical Data - Step 1
+04:24
+Encoding Categorical Data - Step 2
+05:54
+Encoding Categorical Data - Step 3
+04:39
+Splitting the dataset into the Training set and Test set - Step 1
+03:55
+Splitting the dataset into the Training set and Test set - Step 2
+05:59
+Splitting the dataset into the Training set and Test set - Step 3
+03:52
+Feature Scaling - Step 1
+05:56
+Feature Scaling - Step 2
+04:45
+Feature Scaling - Step 3
+03:48
+Feature Scaling - Step 4
+05:59
+Logistic Regression Intuition
+04:55
+Maximum Likelihood
+03:50
+Logistic Regression in Python - Step 1a
+05:43
+Logistic Regression in Python - Step 1b
+03:59
+Logistic Regression in Python - Step 2a
+05:51
+Logistic Regression in Python - Step 2b
+05:57
+Logistic Regression in Python - Step 3a
+03:58
+Logistic Regression in Python - Step 3b
+03:30
+Logistic Regression in Python - Step 4a
+05:59
+Logistic Regression in Python - Step 4b
+01:49
+Logistic Regression in Python - Step 5
+05:59
+Logistic Regression in Python - Step 6a
+05:52
+Logistic Regression in Python - Step 6b
+03:33
+Logistic Regression in Python - Step 7a
+05:54
+Logistic Regression in Python - Step 7b
+03:44
+Logistic Regression in Python - Step 7c
+03:19
+Logistic Regression in Python - Step 7 (Colour-blind friendly image)
+00:12
+Machine Learning Regression and Classification EXTRA
+00:19
+EXTRA CONTENT: Logistic Regression Practical Case Study
+00:16
+Huge Congrats for completing the challenge!
+01:33
+Bonus: How To UNLOCK Top Salaries (Live Training)
+00:44"
+               /-->
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textStyle="bold"
+                android:textColor="#3C3B3B"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:id="@+id/new_c_long_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Desc"
+                android:textColor="#5A5959"
+                android:textSize="13sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="7dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Who is this course for: "
+                android:textStyle="bold"
+                android:textColor="#3C3B3B"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/new_c_rv_course_for"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
+            <!--TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  • Anyone interested in Deep Learning
+\n  • Students who have at least high school knowledge in math and who want to start learning Deep Learning
+\n  • Any intermediate level people who know the basics of Machine Learning or Deep Learning, including the classical algorithms like linear regression or logistic regression and more advanced topics like Artificial Neural Networks, but who want to learn more about it and explore all the different fields of Deep Learning
+\n  • Anyone who is not that comfortable with coding but who is interested in Deep Learning and wants to apply it easily on datasets
+\n  • Any students in college who want to start a career in Data Science
+\n  • Any data analysts who want to level up in Deep Learning
+\n  • Any people who are not satisfied with their job and who want to become a Data Scientist
+\n  • Any people who want to create added value to their business by using powerful Deep Learning tools
+\n  • Any business owners who want to understand how to leverage the Exponential technology of Deep Learning in their business
+\n  • Any Entrepreneur who wants to create disruption in an industry using the most cutting edge Deep Learning algorithms"
+                android:textColor="#5A5959"
+                android:textSize="14sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="7dp"
+                /-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                >
+                <ExpandableListView
+                    android:id="@+id/expandableListViewSample"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@android:color/darker_gray"
+                    android:dividerHeight="0.5dp"
+                    android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft" />
+
+            </RelativeLayout>
+
+            <!--include
+                android:layout_height="190dp"
+                android:layout_width="match_parent"
+                layout="@layout/layout_expand_list"/-->
+
         </LinearLayout>
+
     </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
+        android:id="@+id/btm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
+        android:background="@color/blue_main_bg"
         >
         <TextView
+            android:id="@+id/new_c_watch_demo"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -123,6 +801,7 @@ Machine learning (ML) is a discipline of artificial intelligence (AI) that provi
             android:layout_marginVertical="10dp"
             />
         <TextView
+            android:id="@+id/new_c_buy_now"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -135,6 +814,7 @@ Machine learning (ML) is a discipline of artificial intelligence (AI) that provi
             android:layout_marginHorizontal="20dp"
             android:layout_marginVertical="10dp"
             />
+
 
 
     </LinearLayout>

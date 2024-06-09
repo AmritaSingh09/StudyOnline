@@ -2,11 +2,13 @@ package com.org.studyonline.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -14,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.navigation.NavigationView;
 import com.org.admin.AdminMain;
 import com.org.calculator.MainCalculator;
 import com.org.course.ui.CourseActivityMain;
@@ -23,6 +26,12 @@ import com.org.studyonline.core.adapters.MentorAdapter;
 import com.org.studyonline.core.adapters.SliderHome1;
 import com.org.studyonline.core.models.CourseModel;
 import com.org.studyonline.core.models.MentorModel;
+import com.org.studyonline.ui.Calander.SimpleCalanderView;
+import com.org.studyonline.ui.home.AboutUs;
+import com.org.studyonline.ui.home.CustomerSupport;
+import com.org.studyonline.ui.home.Doubts;
+import com.org.studyonline.ui.home.Notifications;
+import com.org.studyonline.ui.home.Profile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +39,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
+    private NavigationView nav_view;
     private ImageView hamb, not, btn_course_plan;
     private TextView name, course_name, course_duration, left_duration, working_days, price, left_price, course_desc,
             category_all, course_all, study_all, mentor_all ;
@@ -65,10 +75,46 @@ public class MainActivity extends AppCompatActivity {
 
         not.setOnClickListener(v -> {
             //Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(MainActivity.this, AdminMain.class));
-
+            startActivity(new Intent(MainActivity.this, Notifications.class));
         });
-
+//drawer navigation
+        nav_view.setNavigationItemSelectedListener(menuItem -> {
+            if (menuItem.getItemId() == R.id.nav_about_us){
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            } else if (menuItem.getItemId() == R.id.nav_customer_support) {
+                startActivity(new Intent(MainActivity.this, CustomerSupport.class));
+            } else if (menuItem.getItemId() == R.id.nav_settings) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            } else if (menuItem.getItemId() == R.id.nav_personal_reminders) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            } else if (menuItem.getItemId() == R.id.nav_logout) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            } else if (menuItem.getItemId() == R.id.nav_doubts) {
+                startActivity(new Intent(MainActivity.this, Doubts.class));
+            } else if (menuItem.getItemId() == R.id.nav_study_material) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            } else if (menuItem.getItemId() == R.id.nav_quiz) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            } else if (menuItem.getItemId() == R.id.nav_library) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            } else if (menuItem.getItemId() == R.id.nav_results) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            } else if (menuItem.getItemId() == R.id.nav_attendance) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            } else if (menuItem.getItemId() == R.id.nav_events) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            } else if (menuItem.getItemId() == R.id.nav_course) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            } else if (menuItem.getItemId() == R.id.nav_profile) {
+                startActivity(new Intent(MainActivity.this, Profile.class));
+            } else if (menuItem.getItemId() == R.id.nav_calendar) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            } else if (menuItem.getItemId() == R.id.nav_notification) {
+                startActivity(new Intent(MainActivity.this, AboutUs.class));
+            }
+            return true;
+        });
+//Detail page listing
         category_all.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
@@ -81,23 +127,23 @@ public class MainActivity extends AppCompatActivity {
         mentor_all.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
-
+//bottom navigation
         nav_home.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, AdminMain.class));
+            //todo refresh the page
         });
         nav_study.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, AdminMain.class));
+            startActivity(new Intent(MainActivity.this, CourseActivityMain.class));
         });
         nav_chat.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
         nav_todo.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, AdminMain.class));
+            startActivity(new Intent(MainActivity.this, SimpleCalanderView.class));
         });
         nav_profile.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, AdminMain.class));
+            startActivity(new Intent(MainActivity.this, Profile.class));
         });
-
+//categories
         ct_course.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, CourseActivityMain.class));
         });
@@ -116,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
         ct_calender.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
-
+//addional listing
         library_card.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, AdminMain.class));
         });
@@ -241,6 +287,7 @@ public class MainActivity extends AppCompatActivity {
 
     private synchronized void initialize() {
         drawerLayout = findViewById(R.id.drawer_layout);
+        nav_view = findViewById(R.id.nav_view);
 
         //top
         hamb = findViewById(R.id.hamb);
@@ -296,4 +343,9 @@ public class MainActivity extends AppCompatActivity {
         nav_profile = findViewById(R.id.h_btm_profile);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        drawerLayout.close();
+    }
 }
